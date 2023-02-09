@@ -19,7 +19,7 @@ type TodoItem struct {
 	Done bool `json:"done"`
 }
 
-type TodoItem struct {
+type ListItem struct {
 	Id int
 	ListId int
 	ItemId int
