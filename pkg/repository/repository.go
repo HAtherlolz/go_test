@@ -1,5 +1,9 @@
 package repository
 
+import (
+	"github.com/jmoiron/sqlx"
+	// "github.com/Hatherlolz/go_test"
+)
 
 type Authorization interface {
 
@@ -21,6 +25,6 @@ type Repository struct {
 	TodoItem
 }
 
-func NewRepository() *Repository {
+func NewRepository(db *sqlx.DB) *Repository {
 	return &Repository{}
 }

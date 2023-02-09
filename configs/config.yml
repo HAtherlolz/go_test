@@ -1,1 +1,9 @@
 port: "8000"
+
+db:
+  username: "postgres"
+  password: "1003kv2000"
+  host: "localhost"
+  port: "5432"
+  dbname: "go_test"
+  sslmode: "disable"
