@@ -1,9 +1,12 @@
 package service
 
-import "github.com/Hatherlolz/go_test/pkg/repository"
+import (
+	"github.com/Hatherlolz/go_test/pkg/repository"
+	"github.com/Hatherlolz/go_test"
+)
 
 type Authorization interface {
-
+	CreateUser(user todo.User) (int, error)
 }
 
 
@@ -23,5 +26,7 @@ type Service struct {
 }
 
 func NewService(repos *repository.Repository) *Service {
-	return &Service{}
+	return &Service{
+		Authorization: NewAuthService(repos.Authorization),
+	}
 }
